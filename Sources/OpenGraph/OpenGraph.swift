@@ -77,11 +77,11 @@ public struct OpenGraph {
         }
     }
 
-    public init(htmlString: String) {
-        self = OpenGraph(htmlString: htmlString, parser: DefaultOpenGraphParser())
+    public init(htmlString: String, parser: OpenGraphParser = DefaultOpenGraphParser()) {
+        self = OpenGraph(htmlString: htmlString, parser: parser)
     }
     
-    init(htmlString: String, parser: OpenGraphParser) {
+    public init(htmlString: String, parser: OpenGraphParser) {
         source = parser.parse(htmlString: htmlString)
     }
     
