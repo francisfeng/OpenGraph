@@ -77,8 +77,8 @@ public struct OpenGraph {
         }
     }
 
-    public init(htmlString: String, parser: OpenGraphParser = DefaultOpenGraphParser()) {
-        self = OpenGraph(htmlString: htmlString, parser: parser)
+    public init(htmlString: String) {
+        self = OpenGraph(htmlString: htmlString, parser: DefaultOpenGraphParser())
     }
     
     public init(htmlString: String, parser: OpenGraphParser) {
